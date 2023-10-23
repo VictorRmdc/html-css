@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /*Box-level*/
+            background-color: lightgray;/*Cor de fundo de h1*/
+            height: 300px;/*Altura de h1*/
+            width: 300px;/*largura de h1*/
+
+            border-width: 10px;/*largura da borda de h1*/
+            border-style: solid;/*estilo da borda de h1*/
+            border-color: darkslategray;/*Cor da borda de h1*/
+            /*A configuração de borda logo acima, pode ser simplificado por (border: 10px solid darkslategray;)*/
+            
+            
+            padding-top: 10px; /*padding-top configura a parte de cima do h1 -- padding-right da direita de h1 -- padding-bottom configura a parte de baixo do padding h1 -- padding-left configura a parte da esquerda do padding h1*/
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*A configuração de padding logo acima, pode ser simplificado por (padding: 10px 10px 10px 10px;) se todas os parametros for iguais a 10 como o exemplo do paddin acima, basta simplificar com padding: 10px que será reconhecido 10 px para todos*/
+            
+            
+            /* margin: auto; centraliza o elemento caixa no centro da tela, caso seja um texto, pode utilizar o text-align mesmo*/
+           
+            /* Utilizando as configurações abaixo, anula o margin: auto
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+          */  
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            /*A configuração de margin logo acima, pode ser simplificado por (margin: 20px 20px 40px 20px; ou caso deseje que as laterais fiquem centralizadas pode codar dessa forma > margin: 20px auto 40px auto;) Assim o código ficam bem mais simplificado*/
+            margin: 20px 20px 40px 20px;
+            margin: 20px auto 40px auto;
+            
+            outline-width: 5px; /*é o tracejado que tem dentro da margem*/
+            outline-style: dashed; /*Estilo do outiline, dashed : tracejado*/
+            outline-color: aqua;
+            /*A configuração de borda logo acima, pode ser simplificado por (outline: 5px dashed aqua;)*/
+            outline: 5px dashed aqua;
+        } 
+
+        a { /*inline-level*/
+            border-width: 10px; /*largura da borda do elemento <a>*/
+            border-style: groove;/*Estilo da borda do elemento <a>*/
+            border-color: red;/*Cor da borda do elemento <a>*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a> Vamos ver como tudo isso funciona</p>
+</body>
+</html>

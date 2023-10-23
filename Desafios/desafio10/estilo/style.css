@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+/*Logo abaixo está sendo importado a fonte bebas do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handlee&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*Logo abaixo estamos importando uma fonte que realizamos o download do arquivo*/
+@font-face {
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+:root { /*Elemento para configuração geral, logo abaixo está sendo declarado variáveis em css, onde as cores são guardadas em nomes, também estamos declarando variaveis para fontes*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', Arial;
+    --fonte-android: 'Android', Arial;
+}
+
+* {  /*configuração global, onde as configurações aplicadas serão validas para todos os elementos*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);    
+}
+
+a.externo::after {/*em todo link(a) com classe esterno, depois do texto(after que indica depois) será aplicado o emoji avaixo (🔗)código=1F517 que indicará que o link é externo. :: = pseudo-elemento*/
+    content: '\00A0\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));/*adicionando cor gradiente no cabeçalho, usando a cor 2 a cor 5, começando de cima com a cor2 e terminando com a cor5 na parte de baixo*/
+    min-height: 150px;/*Altura do header, cabeçalho em relação ao body*/
+    text-align: center; /*Alinhando no centro os elementos header, cabeçalho*/
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;   
+    font-family: var(--fonte-destaque);
+    font-size: 3em;/*Tamanho do texto*/
+    font-weight: normal;
+    margin-bottom: 20px;/*add margem abaixo do h1, com isso aplica uma pequena distância do h1 ao paragrafo*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.345);/*Sombreamento no texto de h1 do cabeçalho*/
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px; /*Faz com a diminuição da tela o p de header não misture com o elemrnto de navegação a */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.397);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.388);
+
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;/*Essa aplicação retira o sublinhado do elemento a (link)*/
+    font-weight: bold;/*Colocando o texto do elemento a em negrito*/
+    transition-duration: 0.5s;/*configura o tempo que ocorrerá as mudanças da configuração do a:hover */
+}
+
+nav > a:hover {/*Ao passar o mouse em cima dos elementos a, será aplicado as configurações abaixo*/
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main {
+    min-width: 200px;/*Largura mínima e max do conteúdo main*/
+    max-width: 800px;
+    margin: auto;/*Centraliza os elementos independente do tamanho da tela*/
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.264);/*Sombra do main*/
+    border-radius: 0px 0px 10px 10px;/*arredondamento do elemento main, nesse caso apliquei apenas na parte inferior também pode ser feito da forma mostrada abaixo( border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;)*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+main  h1  {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor0), transparent);/*Adc cor gradiente no h2, para direita começando com a cor0 e acabando em transparente*/
+    text-indent: 8px;
+}
+
+main  p {
+    margin: 15px 0px; 
+    text-align: justify;
+    text-indent: 30px;/*Recuo dos primeiros paragrafos do elemento p em main*/
+    font-size: 1em;/*Tamanho do texto*/
+    line-height: 2em;/*Espaçamento entre linhas verticalmente*/
+ }
+
+ main strong { /*configurações dos elementos que estão em negrito dentro dos elementos de main*/
+    color: var(--cor4);
+    font-weight: bold;
+ }
+
+ main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+ }
+
+ main a:hover { /*ao passar o mouse em cima dos links (a) serão aplicadas as configurações abaixo que é sublinhado e cor de texto*/
+    text-decoration: underline;
+    color: var(--cor4);
+ }
+
+main img {
+    width: 100%;
+}
+
+main img.pequena { /*As configurações abaixo faz com que a imagem com a classe pequena fique centralizada e aumente largura somente até 350px*/
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.36);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;/*Margin negativa para que o bloco h3 vaze o bloco aside*/
+    border-radius: 10px 10px 0px 0px;/*arredondando o bloco h3 que vazou do bloco aside. Aplicado apenas na parte superior que foi vazada*/
+}
+
+aside > ul {
+    list-style-type: '\2705\00A0\00A0';/*Faz com que as bolinhas da lista seja substituida pelo emoji ✅ do código 2705 pegado do emojipedia. Não esquecer de colocar a barra invertida entes do código. 00A0 = faz com que o check não fique grudado no conteúdo*/
+    list-style-position: inside;/*Comando faz com que as bolinhas da lista fiquem dentro do elemento aside e não para fora*/
+    columns: 2; /*divide os elemento em ul em 2 colunas*/
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
