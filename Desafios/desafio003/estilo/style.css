@@ -61,7 +61,7 @@ header > p {
     padding-right: 10px;
     padding-left: 10px;
     margin: auto;
-    margin-bottom: 20px; /*Faz com a diminuição da tela o p de header não misture com o elemrnto de navegação a */
+    padding-bottom: 20px; /*Faz com a diminuição da tela o p de header não misture com o elemrnto de navegação a */
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.397);
 }
 
