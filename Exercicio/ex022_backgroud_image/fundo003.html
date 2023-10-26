@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posições dos Fundos</title>
+    <style>
+        div.bloco {
+            background-image: url(imagens/wallpaper003.jpg);
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        div#q1 {
+            background-position: left top; /*posição da imagem do fundo, left top, significa que a imagem começa da esquerda da parte de cima*/
+        }
+
+        div#q2 {
+            background-position: left center; /*posição da imagem do fundo, left center, significa que a imagem começa da esquerda, porém, do centro da imagem*/
+        }
+
+        div#q3 {
+            background-position: right bottom; /*posição da imagem do fundo, right bottom, significa que a imagem começa da direita, porém, da parte de baixo da imagem*/
+        }
+
+        div#q4 {
+            background-position: center center; /*posição da imagem do fundo, center center, significa que a imagem será mostrada o centro, basicamente a imagem começa a ser mostrada do centro */
+        }
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1"></div>
+    <div class="bloco" id="q2"></div>
+    <div class="bloco" id="q3"></div>
+    <div class="bloco" id="q4"></div>
+</body>
+</html>
