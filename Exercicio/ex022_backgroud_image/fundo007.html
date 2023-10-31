@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            position: relative;
+            height: 500px;
+            padding: 10px;
+            height: 95vh;
+            background-color: purple;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%; /*Está fazendo com que a imagem se enquadre completamente dentro de do elemento.*/
+
+        }
+
+        #conteudo {
+            position: absolute;/*Aplicando essa configuração, é possível manipular o elemento id=conteudo dentro da div semântica pai (container)*/
+            height: 200px;
+            width: 400px;          
+            background-color: yellow;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;/*Faz com que a imagem ocupe 100% do elemento*/
+
+            left: 50%; /*Utilizando os comandos left: 50% top: 50% e transform: translate(-50%, -50%); é possível colocar o elemento conteúdo cetralizado no elemento container*/
+            top: 50%;
+
+            transform: translate(-50%, -50%);/*os números negativos indicam que o elemeto irá -50% a esquerda e -50% para cima.
+            É necessário usar esse comando (transform: translate(-50%, -50%), pois como está sendo considerado a direita da parte de cima da imagem do elemento conteúdo, não é possível centralizar apenas com left: 50% e   top: 50%*/
+        }
+    </style>
+</head>
+<body>
+    <section id="container"><!container identifica o elemento de fora>
+        <article id="conteudo"><!Article, identifica o elemento de dentro>
+
+        </article>
+    </section>
+</body>
+</html>

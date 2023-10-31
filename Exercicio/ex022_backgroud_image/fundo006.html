@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de imagem de fundo</title>
+    <title>Fundo fixo da tela</title>
     <style>
         body {
-            height: 100vh;
+            /*Shortland - background
+            Sequência: color > image > position > repeat > size > attachment 
+            Assim ficaria as configurações que substituiria as de baixo a partir de background-color ( background: black url('imagens/wallpaper002.jpg') center top no-repeat cover fixed;  Importante: background-size: cover; não funciona nesse shortland e deve ser aplicado em separado.)
+            */
+            height: 100vh;/*Body assume 100% da vh : viewport(tela)*/
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;/*(Fixed: Faz com que a imagem do fundo fique fixa enquanto rolamos o conteúdo do site) (Scroll : faz com que a imagem vá jundo de acordo que descemos no conteúdo do site ) Usado em conjundo com o comando background-size: cover Cover: Vai adaptando a imagem de acordo com a tela; */
+
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid black;
@@ -27,6 +33,11 @@
 <body>
     <main>       
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus, accusamus fugiat enim maxime beatae consequatur itaque tenetur excepturi totam vel sunt voluptate! Possimus cupiditate earum quasi numquam odio. Perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facere illum pariatur ducimus est deleniti, cupiditate vero soluta ullam dolor rerum, porro eaque dolores. Ullam reprehenderit ex nobis quia placeat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci quis minus eius earum, provident omnis quisquam dicta repudiandae exercitationem fugit. Saepe inventore alias at, enim quia deleniti ipsum qui!</p>
     </main>
 </body>
