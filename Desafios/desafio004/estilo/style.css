@@ -1,2 +1,67 @@
 @charset "UTF-8";
 
+* { /*configurações gerais da página*/
+    margin: 0px;
+    padding: 0px;
+}
+
+html body {
+    min-height: 100%; /*Ocupa 100 % da largura*/
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase; = Tranforma o texto de h1 em letras maiusculas, porém aparenta letras de forma gritante*/
+    font-variant: small-caps; /*Tranforma o texto de h1 em letras maiusculas, porém, de forma bem mais suave */
+}
+
+header p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;/*Link sem sublinhado*/
+    font-weight: bolder;/*Negrito*/
+
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section { /*configuração para todas as sections*/
+    padding-top: 10vh; /*preenchendo 10% da altura da view port de todas as sections, fazendo que cada section tenha 10% altura da tela de padding top e bottom.*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*espaçamento entre as letras do corpo section*/
+    padding-left: 30px; /*preechendo o lado esquerdo, fazendo com que o texto não fique colado no lado esquerdo.*/
+}
+
+section.normal { /*section class=normal*/
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /*section class=imagem*/
+    background-color: rgba(0, 0, 0, 0.405);
+    color: white;
+}
+
+section.imagem p {
+    background-color: black;
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
