@@ -17,7 +17,7 @@
 }
 
 html body {
-    min-height: 100%; /*Ocupa 100 % da largura*/
+    min-height: 100%; /*Ocupa 100 % da altura dos elementos*/
     background-color: darkgray;
     font-family: var(--fonte1);
 }
@@ -60,6 +60,10 @@ section { /*configuração para todas as sections*/
     font-size: 3.5vw; /*Faz com que o h1 ocupe 10% da largura da tela, com isso, idenpendente do tamanho da tela, será ocupado 10% de largura.*/
 }
 
+section p {
+    padding-bottom: 2em;
+}
+
 section.normal { /*section class=normal*/
     background-color: white;
     color: black;
@@ -68,12 +72,27 @@ section.normal { /*section class=normal*/
 section.imagem { /*section class=imagem*/
     background-color: rgba(0, 0, 0, 0.405);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.437);/*Sombra para dentro no section imagem, na página da a sensação que a section imagens está por cima das demais*/
+    background-attachment: fixed;/*Faz com que as imagens fiquem fixa na página ao rolar com o mouse*/
 }
 
 section.imagem p {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.668);
     display: inline-block; /*Faz com que a caixa se adapte ao tamanho do conteúdo*/   
     padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 { /*Aplicando id na section para que seja possível aplicar a imagem*/
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02 { /*Aplicando id na section para que seja possível aplicar a imagem*/
+    background-image: url('../imagens/background002.jpg');
+    background-position: bottom right;
+    background-size: cover;
 }
 
 footer {
