@@ -14,6 +14,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -21,12 +22,33 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: black;
             color: white;
         }
 
-        .numero {
+        thead > tr > th { /*cabeçalho fixo, para que funcione na configuração css a table deve ter position = relative */
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
+
+        tbody > tr:nth-child(odd) /*odd ou 2n-1*  (Efeito zebrado na tabela)/ {
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) /* even ou 2n  (Efeito zebrado na tabela)*/{
+            background-color: lightgrey;
+        }
+
+        td.numero {
             text-align: right;
         }
 
@@ -38,19 +60,21 @@
         Anatomia para tabelas grandes
 
         TABLE
-            THEAD
+            CAPTION = LEGENDA DA TABELA
+            THEAD = CABEÇALHO DE TABELA
                 TR, TD, TH
-            TBODY
+            TBODY = CORPO DE TABELA
                 TR, TD, TH
-            TFOOT
+            TFOOT = RODAPÉ DE TABELA
                 TR, TD, TH
     -->
 
     <table>
+        <caption>População das Unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         
@@ -168,7 +192,7 @@
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!--Scope row é utilizado quando o dado de td está na mesma linha do título th, já scope col é utilizado quando o dado td está na linha abaixo do título th-->
                 <td class="numero"><strong>233 265 117</strong>	</td>
             </tr>
         </tfoot>
