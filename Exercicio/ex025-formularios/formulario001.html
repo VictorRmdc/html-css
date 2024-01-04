@@ -13,11 +13,13 @@
 <body>
     <h1>Meu primeiro formulário</h1>
 
-    <form action=""><!--Todo formulário deve estar dentro de form /form-->
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+    <form action="cadastro.php" autocomplete="off"><!--Todo formulário deve estar dentro de form /form, autocomplete off, desliga a sugestão de texto, Action, encaminha as informações do formulário-->
+        <p><label for="inome">Nome: </label> <!--É necessário relacionar o input com a label atraves do seu id, conforme mostrado no exemplo.Basicamente, relaciona o input text nome com a caixa de prenchimento label nome-->
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
 
-        <p><input type="submit" value="Enviar"></p><!--input submeter, botão, value e preenchido com o texto do botão-->
+        <p>
+            <input type="submit" value="Enviar"></p><!--input submeter, botão, value e preenchido com o texto do botão-->
     </form>
 </body>
 </html>
