@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"><!--Method get, usado para dados não sensíveis, post = usado para dados mais sensíveis-->
+        <p>
+            <label for="iusuario">Usuário:</label>
+            <input type="text" name="usuario" id="isuario" required minlength="5" maxlength="15" size="10" placeholder="Nome de Usuário" autocomplete="username">
+
+            <!--Required = Passa ser obrigatório o preenchimento de dados na input
+            minlength = aqui é configurado o minímo de caracteres e maxlength = o máximno de caracteres
+            Size = tamanho da caixa e quantidade de caracteres que serão mostrados, no caso será aceito no máximo 15 e será mostrado 10.
+            placeholder = mostra uma dica do assunto do dado que será colocado no forms.
+            -->
+        </p>
+
+        <p>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" size="8" autocomplete="current-password"> <!--Input password, ao digitar não mostra os caracteres digitados.-->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!--Input type reset, ao apertar, reseta as informações do formulário-->
+        </p>
+    </form>
+</body>
+</html>
