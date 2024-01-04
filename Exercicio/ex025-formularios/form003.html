@@ -12,7 +12,34 @@
             <label for="inome">Nome</label>
             <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
         </p>
-        
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" required value="5">
+            <!--step=0.5, possibilita que o input number, receba número quebrados como 5.5 
+            quando for dados númericos, é utilizado min e max em vez de minlength e maxlength
+            -->
+        </p>
+
+        <p>
+            <label for="imes">Periodo Letivo</label>
+            <input type="month" name="mes" id="imes" value="2024-01">
+            <!--Type=month Mês , Value= começar com a data desejada automáticamente-->
+        </p>
+
+        <p>
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia" value="2024-01-04">
+        </p>
+
+        <p>
+            <label for="ihora">Horário da prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>  
 
 
     </form>
