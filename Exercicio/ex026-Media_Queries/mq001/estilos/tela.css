@@ -21,7 +21,7 @@ header h1 {
 }
 
 menu ul {
-    list-style-type: none;
+    list-style-type: none; /*Retira as bolinhas do lado esquerdo dos tópicos de menu*/
     background-color: grey;
 }
 
