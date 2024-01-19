@@ -51,6 +51,8 @@ Grandes telas: Acima de 1200px
 @media screen and (min-width: 768px) and (max-width: 992px) { /*TABLET (Quando a tela estiver dentro de 768px e 992px tela tablet, será ativado as configurações abaixo.)*/
     body {
         background-image: url(../imagens/back-tablet.jpg);
+        background-size: cover;
+        background-position: center center;
     }
 
     img#phone { display: none;}
