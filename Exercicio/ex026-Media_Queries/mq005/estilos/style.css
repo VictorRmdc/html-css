@@ -23,7 +23,7 @@ header h1 {
 i#burguer {
     background-color: rgb(49, 48, 48);
     color: white;
-    
+    margin: auto;
     display: block;
     text-align: center;
     padding: 10px;
